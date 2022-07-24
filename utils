@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
+
+const fs = require('fs')
+
+if(argv.rm){
+    console.log("dist folder removed")
+    fs.rmSync('./dist', { recursive: true, force: true })
+}

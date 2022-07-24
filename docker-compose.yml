@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  node:
+    build: .
+    hostname: node
+    env_file:
+      - .env
+    restart: unless-stopped
+    command: npm run start
+    ports:
+      - "127.0.0.1:${PORT}:${PORT}"
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
