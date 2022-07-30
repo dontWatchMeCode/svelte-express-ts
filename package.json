@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:prep && npm run build:node && npm run build:vite",
+    "build": "node ./utils --env && npm run build:prep && npm run build:node && npm run build:vite",
     "build:prep": "node ./utils --rm",
     "build:node": "npx tsc",
     "build:vite": "npm run build --prefix ./vite",
-    "watch": "concurrently \" npm run watch:vite \" \" npm run watch:node \"",
+    "watch": "node ./utils --env && concurrently \" npm run watch:vite \" \" npm run watch:node \"",
     "watch:vite": "npm run watch --prefix ./vite",
     "watch:node": "concurrently \"npx tsc --watch --preserveWatchOutput\" \"nodemon -q dist/node/index.js\"",
     "check:vite": "npm run check --prefix ./vite",

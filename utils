@@ -7,9 +7,25 @@ const argv = yargs(hideBin(process.argv)).argv
 const fs = require('fs')
 
 if (argv.rm) {
+
     console.log("dist folder removed")
     fs.rmSync('./dist', { recursive: true, force: true })
+    return
+
+} if (argv.env) {
+
+    if (!fs.existsSync("./.env")) {
+        console.log("no .env file exists")
+        console.log("please create one")
+        process.exit(1)
+    }
+    console.log(".env file exists")
+    return
+
 } else {
+
     console.log("wrong / no argument")
     console.log("  --rm (to remove dist folder)")
+    return
+
 }
