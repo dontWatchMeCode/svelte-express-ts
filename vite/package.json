@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "watch": "vite",
     "build": "vite build --emptyOutDir --outDir ../dist/vite",
-    "watch": "vite build --watch --emptyOutDir --outDir ../dist/vite",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
