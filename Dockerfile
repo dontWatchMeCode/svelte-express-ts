@@ -1,17 +1,13 @@
 FROM node:16
 
-# Create app directory
 WORKDIR /usr/src/app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
 COPY package*.json ./
 
+# install production packes
+# ignore postinstall (vite packages)
 RUN npm ci --only=production --ignore-scripts
-# If you are building your code for production
-# RUN npm ci --only=production
 
-# Bundle app source
+# copy files (withought source)
 ADD .env /usr/src/app
 ADD dist /usr/src/app/dist

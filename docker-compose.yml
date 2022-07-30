@@ -11,5 +11,5 @@ services:
     command: npm run start
     ports:
       - "127.0.0.1:${PORT}:${PORT}"
-    stdin_open: true # docker run -i
-    tty: true # docker run -t
+    stdin_open: false   # docker run -i
+    tty: false          # docker run -t

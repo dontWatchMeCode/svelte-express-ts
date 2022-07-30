@@ -1,3 +1,8 @@
+/*
+    * only effects the nodejs code
+    * vite is excluded / separate tsconfig
+*/
+
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
