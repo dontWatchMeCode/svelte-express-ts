@@ -71,7 +71,6 @@
   }
 
   h1 {
-    color: white;
     transition: 0.3s;
     background: linear-gradient(
       90deg,
