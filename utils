@@ -25,7 +25,9 @@ if (argv.rm) {
 } else {
 
     console.log("wrong / no argument")
-    console.log("  --rm (to remove dist folder)")
+    console.log("-------------------")
+    console.log("  --rm     to remove dist folder")
+    console.log("  --env    checks for .env file & eixts if not found")
     return
 
 }
