@@ -1,5 +1,5 @@
 /*
-    * con be reached at:
+    * can be reached at:
     * URL/api/...
 */
 
